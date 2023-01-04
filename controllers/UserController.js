@@ -148,7 +148,7 @@ const suggestionsUser = async (req, res) => {
       { $sample: { size: Number(num) } },
       {
         $lookup: {
-          from: "users",
+          from: "User",
           localField: "followers",
           foreignField: "_id",
           as: "followers",
@@ -156,7 +156,7 @@ const suggestionsUser = async (req, res) => {
       },
       {
         $lookup: {
-          from: "users",
+          from: "User",
           localField: "following",
           foreignField: "_id",
           as: "following",
