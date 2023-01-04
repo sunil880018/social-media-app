@@ -10,14 +10,12 @@ const PostSchema = new Schema(
       {
         type: Schema.Types.ObjectId,
         ref: "User",
-        required: true,
       },
     ],
     comments: [
       {
         type: Schema.Types.ObjectId,
         ref: "Comment",
-        required: true,
       },
     ],
     user: {
@@ -29,7 +27,6 @@ const PostSchema = new Schema(
       {
         type: Schema.Types.ObjectId,
         ref: "User",
-        required: true,
       },
     ],
   },
